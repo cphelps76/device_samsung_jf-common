@@ -31,14 +31,15 @@ USE_CAMERA_STUB := true
 TARGET_SPECIFIC_HEADER_PATH := device/samsung/jf-common/include
 
 # Kernel
-TARGET_KERNEL_SOURCE        := kernel/samsung/jf
-BOARD_KERNEL_CMDLINE        := androidboot.hardware=qcom user_debug=31 zcache
-BOARD_KERNEL_BASE           := 0x80200000
+TARGET_KERNEL_SOURCE := kernel/samsung/jf
+BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom user_debug=31 zcache
+BOARD_KERNEL_BASE := 0x80200000
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000
-BOARD_KERNEL_PAGESIZE       := 2048
+BOARD_KERNEL_PAGESIZE := 2048
 TARGET_KERNEL_VARIANT_CONFIG := DEMENTED_jf_defconfig
 TARGET_KERNEL_SELINUX_CONFIG := jfselinux_defconfig
-TARGET_KERNEL_CUSTOM_TOOLCHAIN := linaro
+TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-4.6/bin/arm-eabi-
+TARGET_GCC_VERSION := 4.6
 
 #Tune for cortex-a15
 TARGET_EXTRA_CFLAGS := -mtune=cortex-a15 -mcpu=cortex-a9
