@@ -24,7 +24,7 @@ DEVICE_PACKAGE_OVERLAYS += device/samsung/jf-common/overlay
 
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal hdpi xhdpi xxhdpi
-PRODUCT_AAPT_PREF_CONFIG := xxhdpi
+PRODUCT_AAPT_PREF_CONFIG := xhdpi
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 1920
@@ -52,6 +52,14 @@ endif
 
 PRODUCT_COPY_FILES += \
     $(GPS_CONF):/system/etc/gps.conf
+
+# Kernel overclocking script, required for Project Elite Jf kernel inline build
+PRODUCT_COPY_FILES += \
+    device/samsung/jf-common/rootdir/etc/03dementedcpuclock:system/etc/init.d/03dementedcpuclock
+
+# DEMENTED bootanimation...Credit JaeKar
+PRODUCT_COPY_FILES +=  \
+    vendor/DEMENTED/prebuilt/common/media/xxhdpi/bootanimation.zip:system/media/bootanimation.zip
 
 # Keylayouts
 PRODUCT_COPY_FILES += \
