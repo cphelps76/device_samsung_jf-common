@@ -24,7 +24,7 @@ DEVICE_PACKAGE_OVERLAYS += device/samsung/jf-common/overlay
 
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal hdpi xhdpi xxhdpi
-PRODUCT_AAPT_PREF_CONFIG := xhdpi
+PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 1920
